@@ -35,8 +35,13 @@ func main() {
 		return
 	}
 
-	json.NewEncoder(os.Stdout).Encode(quotation)
-	// fmt.Println(quotation)
+	file, err := os.Create("cotacao.txt")
+	if err != nil {
+		fmt.Println("Erro ao criar arquivo!")
+		return
+	}
+	defer file.Close()
+	file.WriteString("Dólar: " + quotation.Bid)
 }
 
 func GetDollarQuotation(ctx context.Context) (*DollarQuotation, error) {

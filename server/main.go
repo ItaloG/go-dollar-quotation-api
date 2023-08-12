@@ -124,7 +124,6 @@ func GetDollarQuotation(ctx context.Context) (*DollarQuotation, error) {
 	}
 
 	return &dq.Usdbrl, nil
-
 }
 
 func CreateDollarQuotation(ctx context.Context, dq *DollarQuotation) error {

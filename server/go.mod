@@ -1,4 +1,4 @@
-module github.com/italog/go-dollar-quotation-api
+module github.com/italog/go-dollar-quotation-api/server
 
 go 1.18
 
